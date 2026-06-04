@@ -1,0 +1,401 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #282c3f;
+  color: white;
+  line-height: 1.6;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  position: sticky;
+  top: 0;
+  background: rgba(0, 62, 97, 0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 18px;
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 10px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+nav a:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+}
+
+.white { color: white; }
+.blue { color: #369bb8; }
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #28cfe5, #003e61);
+}
+
+.hero h1 {
+  font-size: 34px;
+  margin-bottom: 8px;
+}
+
+.hero p {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-top: 5px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 18px;
+  background: white;
+  color: #003e61;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.intro {
+  text-align: center;
+}
+
+/* =========================
+   INDEX GRID
+========================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.card {
+  background: white;
+  color: #222;
+  border-radius: 14px;
+  overflow: hidden;
+  padding: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  margin-bottom: 6px;
+}
+
+.card p {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+/* couleurs */
+.vert { border-left: 5px solid #00770d; }
+.jaune { border-left: 5px solid #ffea36; }
+.bleu { border-left: 5px solid #24a2b9; }
+.rouge { border-left: 5px solid #c52222; }
+
+/* =========================
+   SERVICES PAGE (UN SEUL SYSTEME)
+========================= */
+
+body.services-page .page-banner {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+body.services-page .services-page {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+body.services-page .service-card {
+  background: white;
+  color: #282c3f;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  padding: 22px;
+}
+
+body.services-page .service-card h2 {
+  margin-bottom: 10px;
+}
+
+body.services-page .service-card ul {
+  padding-left: 18px;
+  margin-bottom: 12px;
+}
+
+body.services-page .service-card p {
+  margin-bottom: 12px;
+}
+
+body.services-page .service-btn {
+  display: inline-block;
+  padding: 10px 14px;
+  background: #003e61;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+/* CTA */
+.cta-services {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 450px;
+  margin: auto;
+}
+
+input, textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #28cfe5;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* =========================
+   CALL BUTTON
+========================= */
+
+.call-float {
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  width: 58px;
+  height: 58px;
+  background: #24a2b9;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  text-decoration: none;
+  z-index: 9999;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .grid,
+  body.services-page .services-page {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+}
+/* ===== SERVICES MODERNES ===== */
+
+body.services-page .services-page{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+body.services-page .service-card{
+  background: white;
+  color: #222;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  transition: transform 0.2s ease;
+}
+
+body.services-page .service-card:hover{
+  transform: translateY(-5px);
+}
+
+.tag{
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.desc{
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+.list-title{
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.service-card ul{
+  padding-left: 18px;
+  margin-bottom: 10px;
+}
+
+.service-card li{
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.extra{
+  font-size: 12px;
+  opacity: 0.7;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.service-btn{
+  display: inline-block;
+  padding: 10px 14px;
+  background: #003e61;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+/* mobile */
+@media (max-width: 768px){
+  body.services-page .services-page{
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================
+   SERVICES GRID PRO
+========================= */
+
+.services-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* carte propre, légère */
+.services-grid .service-card{
+  background: rgba(255,255,255,0.95);
+  color: #1f1f1f;
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* titre propre */
+.services-grid .service-card h2{
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #003e61;
+}
+
+/* description */
+.services-grid .desc{
+  font-size: 14px;
+  opacity: 0.85;
+  margin-bottom: 10px;
+}
+
+/* liste propre */
+.services-grid ul{
+  padding-left: 18px;
+  margin-bottom: 10px;
+}
+
+.services-grid li{
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+/* bonus */
+.services-grid .extra{
+  font-size: 12px;
+  opacity: 0.7;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+/* bouton discret pro */
+.service-btn{
+  display: inline-block;
+  padding: 10px 14px;
+  background: #003e61;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+/* couleurs barre discrètes */
+.vert{ border-left: 5px solid #00770d; }
+.jaune{ border-left: 5px solid #c9b100; }
+.bleu{ border-left: 5px solid #24a2b9; }
+.rouge{ border-left: 5px solid #c52222; }
+
+/* mobile */
+@media (max-width: 768px){
+  .services-grid{
+    grid-template-columns: 1fr;
+  }
+}
