@@ -5,11 +5,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>B.MULTISERVICE | Artisan </title>
+<title>B.MULTISERVICES | Artisan travaux maison, jardin & rénovation à Villeblevin (89)</title>
 
-<meta name="description" content="B.MULTISERVICE : espaces verts, maçonnerie, nettoyage, peinture. Devis gratuit.">
+<meta name="description" content="B.MULTISERVICES, artisan à Villeblevin et 50 km autour : espaces verts, maçonnerie, nettoyage toiture et façade, peinture intérieure/extérieure. Devis gratuit, intervention rapide.">
 
+<!-- SEO LOCAL (IMPORTANT) -->
+<meta name="geo.region" content="FR-89">
+<meta name="geo.placename" content="Villeblevin">
+<meta name="geo.position" content="48.3167;3.0833">
+<meta name="ICBM" content="48.3167, 3.0833">
+
+<!-- (optionnel) mots-clés -->
+<meta name="keywords" content="artisan Villeblevin, travaux maison 89, jardinage, maçonnerie, nettoyage toiture, peinture, entretien jardin, débroussaillage, artisan local">
+
+<!-- Canonical (très important pour Google) -->
+<link rel="canonical" href="https://www.b-multiservices.com/index.html">
+
+<!-- Polices -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- CSS -->
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -37,7 +52,7 @@
   </p>
 
   <p style="margin-top:10px; font-size:14px; opacity:0.85;">
-    Artisan de proximité à Villeblevin et dans un rayon de 50 km<br>
+    Artisan de proximité à Villeblevin (89) et dans un rayon d’environ 50 km : entretien de jardin, petits travaux de maçonnerie, nettoyage et peinture.<br>
     Devis gratuit • Travail soigné • Intervention rapide
   </p>
 
@@ -83,6 +98,7 @@ Déplacement à Villeblevin et 50 km autour.
     <p>
       Taille de haies, élagage, débroussaillage, abattage et entretien complet de jardin.
     </p>
+    <a href="services.html#espacesverts">En savoir plus</a>
   </div>
 
   <div class="card jaune">
@@ -91,6 +107,7 @@ Déplacement à Villeblevin et 50 km autour.
     <p>
       Dalles béton, murets, clôtures, carrelage et travaux d’aménagement extérieur.
     </p>
+    <a href="services.html#maconnerie">En savoir plus</a>
   </div>
 
   <div class="card bleu">
@@ -99,6 +116,7 @@ Déplacement à Villeblevin et 50 km autour.
     <p>
       Toitures, façades, gouttières, traitement anti-mousse et nettoyage haute pression.
     </p>
+    <a href="services.html#nettoyage">En savoir plus</a>
   </div>
 
   <div class="card rouge">
@@ -107,9 +125,70 @@ Déplacement à Villeblevin et 50 km autour.
     <p>
       Peinture intérieure, extérieure, façades, volets et portails.
     </p>
+    <a href="services.html#peinture">En savoir plus</a>
   </div>
 
 </section>
+
+<!--carte google-->
+<!-- =======================
+     CARTE ZONE INTERVENTION
+======================= -->
+
+<section class="map-block">
+  <h2>Zone d’intervention</h2>
+
+  <div id="map"></div>
+
+  <p>Intervention dans un rayon d’environ 50 km autour de Villeblevin (89).</p>
+</section>
+
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+<style>
+#map {
+  width: 320px;
+  height: 320px;
+  margin: 0 auto;
+  border-radius: 14px;
+}
+.map-block {
+  text-align: center;
+  margin: 50px 0;
+}
+</style>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  // Villeblevin
+  const lat = 48.3167;
+  const lng = 3.0833;
+
+  const map = L.map('map').setView([lat, lng], 9);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap'
+  }).addTo(map);
+
+  // Marker
+  L.marker([lat, lng]).addTo(map)
+    .bindPopup("Villeblevin");
+
+  // Cercle 50 km
+  L.circle([lat, lng], {
+    radius: 50000,
+    color: '#28cfe5',
+    fillColor: '#28cfe5',
+    fillOpacity: 0.15
+  }).addTo(map);
+
+});
+</script>
 
 <!-- CONTACT -->
 <section class="contact">
@@ -133,6 +212,12 @@ Déplacement à Villeblevin et 50 km autour.
 
 <!-- CALL BUTTON -->
 <a href="tel:0644928622" class="call-float">📞</a>
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 </body>
 </html>

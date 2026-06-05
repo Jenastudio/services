@@ -404,3 +404,36 @@ body.services-page .service-card:hover{
   .services-grid{
     grid-template-columns: 1fr;
   }
+  /*carte google*/
+.map-block {
+  text-align: center;
+  margin: 50px 0;
+  color: white;
+}
+
+#map {
+  width: 320px;
+  height: 320px;
+  margin: 0 auto;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/*en savoir plus*/
+.card a,
+.service-card a {
+  color: #4fcfe0 !important;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.card a:hover,
+.service-card a:hover {
+  color: #2aa9c0 !important;
+  text-decoration: underline;
+}
+
+.card a:visited,
+.service-card a:visited {
+  color: #4fcfe0 !important;
+}
