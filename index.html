@@ -166,6 +166,7 @@ Déplacement à Villeblevin et 50 km autour.
   margin: 0 auto;
   border-radius: 14px;
 }
+
 .map-block {
   text-align: center;
   margin: 50px 0;
@@ -174,6 +175,11 @@ Déplacement à Villeblevin et 50 km autour.
 
 <!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<!-- MapLibre -->
+<link href="https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.css" rel="stylesheet">
+<script src="https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.js"></script>
+<script src="https://unpkg.com/@maplibre/maplibre-gl-leaflet/leaflet-maplibre-gl.js"></script>
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -184,11 +190,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const map = L.map('map').setView([lat, lng], 9);
 
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap'
+  // Fond de carte OpenFreeMap
+  L.maplibreGL({
+    style: 'https://tiles.openfreemap.org/styles/liberty'
   }).addTo(map);
 
-  // Marker
+  // Marqueur
   L.marker([lat, lng]).addTo(map)
     .bindPopup("Villeblevin");
 
