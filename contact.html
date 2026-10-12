@@ -34,7 +34,9 @@
 
   <input type="text" name="nom" placeholder="Nom" required>
 
-  <input type="email" name="email" placeholder="Email" required>
+  <input type="email" name="email" id="email"  placeholder="Email" required>
+
+  <input type="email" name="confirmation_email" id="confirmation_email" placeholder="Confirmez votre email" required>
 
   <input type="text" name="ville" placeholder="Ville" required>
 
@@ -45,6 +47,23 @@
   <button type="submit">Envoyer la demande</button>
 
 </form>
+
+<script>
+const email = document.getElementById('email');
+const confirmationEmail = document.getElementById('confirmation_email');
+
+function verifierEmails() {
+  confirmationEmail.setCustomValidity(
+    confirmationEmail.value && email.value !== confirmationEmail.value
+      ? 'Les adresses e-mail ne correspondent pas.'
+      : ''
+  );
+}
+
+email.addEventListener('input', verifierEmails);
+confirmationEmail.addEventListener('input', verifierEmails);
+</script>
+
 
 <p class="info">
 📞 06 44 92 86 22<br>
